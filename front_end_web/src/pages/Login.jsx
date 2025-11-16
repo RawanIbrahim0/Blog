@@ -11,7 +11,6 @@ export default function Login() {
     try {
       const res = await api.post("/users/login", form);
 
-      // حفظ بيانات اليوزر بالـ localStorage
       localStorage.setItem("userId", res.data.user.id);
       localStorage.setItem("userName", res.data.user.name);
 
